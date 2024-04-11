@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
-class MainClass {
-    public static void Main (string[] args) {
+//проверка на дубликаты
+class MainClass 
+{
+    public static void Main (string[] args) 
+    {
         int[] nums1 = {1, 2, 3, 4};
         Console.WriteLine("nums = [1,2,3,4] => " + ContainsDuplicate(nums1));
 
@@ -13,9 +16,11 @@ class MainClass {
         Console.WriteLine("nums = [1,2,3,1] => " + ContainsDuplicate(nums3));
     }
 
-    public static bool ContainsDuplicate(int[] nums) {
+    public static bool ContainsDuplicate(int[] nums) 
+    {
         HashSet<int> set = new HashSet<int>();
-        foreach (int num in nums) {
+        foreach (int num in nums) 
+        {
             if (!set.Add(num))
                 return true;
         }

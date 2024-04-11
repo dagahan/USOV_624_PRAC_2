@@ -23,11 +23,11 @@ class MainClass
             Console.WriteLine($"[{string.Join(",", combination)}]");
     }
 
-    public static IList<IList<int>> CombinationSum(int[] candidates, int target) 
+    public static IList<IList<int>> CombinationSum(int[] candidates, int target)//здесь подготовка к вызову рекурсивной функции
     {
         IList<IList<int>> result = new List<IList<int>>();
         Array.Sort(candidates);
-        Backtrack(result, new List<int>(), candidates, target, 0);
+        Backtrack(result, new List<int>(), candidates, target, 0); //вызов
         return result;
     }
 
@@ -37,6 +37,7 @@ class MainClass
         else if (remain == 0) result.Add(new List<int>(tempList));
         else 
         {
+            //начало перебора
             for (int i = start; i < candidates.Length; i++) 
             {
                 if (i > start && candidates[i] == candidates[i - 1]) continue;

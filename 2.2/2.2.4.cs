@@ -1,30 +1,37 @@
 ﻿using System;
 
-class Counter {
+class Counter 
+{
     private int _value;
 
-    public int Value {
+    public int Value 
+    {
         get { return _value; }
     }
 
-    public Counter() {
+    public Counter() 
+    {
         _value = 0;
     }
 
-    public Counter(int initialValue) {
+    public Counter(int initialValue) 
+    {
         _value = initialValue;
     }
 
-    public void Increment() {
+    public void Increment() 
+    {
         _value++;
     }
 
-    public void Decrement() {
+    public void Decrement() 
+    {
         _value--;
     }
 
-    static void Main(string[] args) {
-        Counter counter = new Counter(5);
+    static void Main(string[] args) 
+    {
+        Counter counter = new Counter(5); //ввод числа на модификацию (вычесть или прибавить)
         Console.WriteLine($"Initial value: {counter.Value}");
         counter.Increment();
         Console.WriteLine($"After increment: {counter.Value}");

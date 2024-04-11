@@ -1,18 +1,25 @@
 ﻿using System;
-using System.Linq;
 
-class one
+class HelloWorld
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        string J = "ab";
-        string S = "aabbccd";
-        int countJewels = CountJewels(J, S);
-        Console.WriteLine(countJewels);
-    }
+        Console.WriteLine("Введите строку драгоценностей J: ");
+        String J = Console.ReadLine();
 
-    static int CountJewels(string J, string S)
-    {
-        return S.Count(ch => J.Contains(ch));
+        Console.WriteLine("Введите строку камней Ѕ: ");
+        String S = Console.ReadLine();
+
+        int count = 0;
+
+        foreach (char stone in S)
+        {
+            if (J.Contains(stone))
+            {
+                count++;
+            }
+
+        }
+        Console.WriteLine("Количество символов из S, которые являютсяя драгоценностями: " + count);
     }
 }
